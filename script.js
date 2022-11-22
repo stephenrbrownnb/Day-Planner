@@ -1,7 +1,31 @@
+
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+  //Shows todays Date
+var today = dayjs();
+$('#currentDay').text(today.format('MMM D, YYYY'));
+
+//Determines current hour
+var hourLive = today.$H;
+//loop to go through timeslots and compare to current time
+for (var i = 0; i < $(".time-block").length; i++) {
+let currentTimeBlock = $(".time-block")[i];
+let currentTime = currentTimeBlock.id;
+
+if (currentTime < hourLive) {
+  $(currentTimeBlock).addClass("past");
+  }
+  if (currentTime == hourLive) {
+    $(currentTimeBlock).addClass("present");
+    }
+    if (currentTime > hourLive) {
+      $(currentTimeBlock).addClass("future");
+      }
+
+}
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
