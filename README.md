@@ -7,6 +7,8 @@ This is a day planner template to show a representative of the calender for toda
 ## Usage
 When loading for the first time you will see today's date as well as time slots for 9am-5pm current time. Any time slots in the past will be gray with the current timeslot being red and future time slots being green. When you type in  information into a slot and hit the save button it will save the information to your local storage for that timeslot. if you reload or travel to another page and back this information will be displayed. Please note if you come back on another day the date will change however it will assume the information in each time slot is the same. You can clear a timeslot by simply deleting the information in the text box and hitting save for that time slot. 
 ![screenshot](screenshot.JPG)
+Deployed site:
+https://stephenrbrownnb.github.io/Day-Planner/
 ## License
 
 
