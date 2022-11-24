@@ -13,7 +13,7 @@ $(".time-block").each(function(){
  if (currentTimeSlot < hourLive) {
   $(this).addClass("past");
   }
-  if (currentTimeSlot == hourLive) {
+   if (currentTimeSlot == hourLive) {
     $(this).addClass("present");
     }
     if (currentTimeSlot > hourLive) {
@@ -30,3 +30,4 @@ $(".saveBtn").click(function(){
    localStorage.setItem(timeOfDay, userInput);
 })
 });
+
